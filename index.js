@@ -61,6 +61,7 @@ const blackBtn = document.getElementById("black");
 const greenBtn = document.getElementById("green");
 const erasebtn = document.getElementById("erase");
 const rainbowBtn = document.getElementById("rainbow");
+const resetBtn = document.getElementsByClassName("reset")[0];
 const colorPicker = document.getElementById("color-picker");
 
 // to have the rainbow btn selected by default
@@ -88,6 +89,13 @@ function changeColor() {
     this.style.backgroundColor = "";
   }
 }
+
+function resetGrid() {
+  for (let i = 0; i < columns.length; i++) {
+    columns[i].style.backgroundColor = "";
+  }
+}
+resetBtn.addEventListener("click", resetGrid);
 
 createGrid();
 draw();
