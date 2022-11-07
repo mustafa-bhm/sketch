@@ -1,9 +1,10 @@
-let gridContainer = document.querySelector(".container");
-let userValue = document.querySelector(".user-number");
-let userSubmit = document.querySelector(".user-submit");
-let warning = document.querySelector(".warning");
-let reset = document.querySelector(".reset");
-let gridSize = document.querySelector(".grid-size");
+const gridContainer = document.querySelector(".container");
+const userValue = document.querySelector(".user-number");
+const userSubmit = document.querySelector(".user-submit");
+const warning = document.querySelector(".warning");
+const reset = document.querySelector(".reset");
+const gridSize = document.querySelector(".grid-size");
+const columns = document.getElementsByClassName("column");
 
 userSubmit.addEventListener("click", createGrid);
 
@@ -48,5 +49,45 @@ function createGrid() {
     }
   }
 }
+function draw() {
+  for (let i = 0; i < columns.length; i++) {
+    columns[i].addEventListener("mouseover", changeColor);
+    // columns[i].addEventListener("mouseover", changeColor);
+  }
+}
+
+const redBtn = document.getElementById("red");
+const blackBtn = document.getElementById("black");
+const greenBtn = document.getElementById("green");
+const erasebtn = document.getElementById("erase");
+const rainbowBtn = document.getElementById("rainbow");
+const colorPicker = document.getElementById("color-picker");
+
+// to have the rainbow btn selected by default
+rainbowBtn.checked = true;
+
+function changeColor() {
+  if (redBtn.checked) {
+    this.style.backgroundColor = "#da2d2d";
+    // console.log(redBtn.checked);
+  } else if (blackBtn.checked) {
+    this.style.backgroundColor = "#2e2b2b";
+    // console.log("black");
+  } else if (greenBtn.checked) {
+    this.style.backgroundColor = "#2dbc1a";
+    // console.log("green");
+  } else if (erasebtn.checked) {
+    this.style.backgroundColor = "";
+  } else if (rainbow.checked) {
+    let randomColor = Math.floor(Math.random() * 16777215).toString(16);
+    this.style.backgroundColor = "#" + randomColor;
+  } else if (colorPicker) {
+    this.style.backgroundColor = colorPicker.value;
+    console.log(colorPicker.value);
+  } else {
+    this.style.backgroundColor = "";
+  }
+}
 
 createGrid();
+draw();

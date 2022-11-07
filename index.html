@@ -21,13 +21,23 @@
       <p class="warning"></p>
 
       <div class="buttons">
-        <button>color 1</button>
-        <button>color 2</button>
-        <button>color 3</button>
-        <button>color 4</button>
-        <button>Erase</button>
         <button class="reset">reste</button>
       </div>
+      <form id="radio-buttons">
+        <input type="radio" name="color" id="black" value="black" />
+        <label for="black">Black</label>
+        <input type="radio" name="color" id="red" value="red" />
+        <label for="red-pen">Red</label>
+        <input type="radio" name="color" id="green" value="green" />
+        <label for="blue-pen">Green</label>
+        <input type="radio" id="rainbow" name="color" value="rainbow" />
+        <label for="Rainbow">Rainbow</label>
+        <input type="radio" id="erase" name="color" value="erase" />
+        <label for="eraser">Eraser</label>
+        <input name="color" type="radio" value="custome" />
+        <label for="color-picker">Choose your own...&emsp;</label>
+        <input name="color" id="color-picker" type="color" />
+      </form>
 
       <div class="board">
         <div class="container"></div>
