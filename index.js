@@ -71,13 +71,10 @@ rainbowBtn.checked = true;
 function changeColor() {
   if (redBtn.checked) {
     this.style.backgroundColor = "#da2d2d";
-    // console.log(redBtn.checked);
   } else if (blackBtn.checked) {
     this.style.backgroundColor = "#2e2b2b";
-    // console.log("black");
   } else if (greenBtn.checked) {
     this.style.backgroundColor = "#2dbc1a";
-    // console.log("green");
   } else if (erasebtn.checked) {
     this.style.backgroundColor = "";
   } else if (rainbow.checked) {
