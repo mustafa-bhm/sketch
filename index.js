@@ -34,7 +34,7 @@ function createGrid() {
   console.log(number);
   if (number < 0 || number > 99 || isNaN(number)) {
     // alert("Pleae enter a valid number");
-    warning.textContent = "Pleae enter a valid number";
+    warning.textContent = "Please enter a valid number";
   } else {
     warning.textContent = "";
     gridSize.textContent = "";

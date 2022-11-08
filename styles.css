@@ -2,6 +2,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Podkova", serif;
+  font-weight: 600;
+  color: white;
+}
+h1 {
+  font-weight: 700;
+  font-size: 3rem;
 }
 
 .etch-container {
@@ -13,19 +20,24 @@
   padding-top: 3rem;
   padding-bottom: 3rem;
   gap: 1rem;
-  background: rgb(129, 3, 126);
+  background: rgb(3, 105, 129);
   background: linear-gradient(
-    90deg,
-    rgba(129, 3, 126, 1) 0%,
+    180deg,
+    rgba(3, 105, 129, 1) 39%,
     rgba(215, 192, 114, 1) 100%
   );
 }
 .user-number {
-  width: 2.5rem;
-  height: 28px;
+  width: 3rem;
+  height: 3rem;
+  font-size: 1rem;
   border: 2px solid black;
   border-radius: 3px;
   text-align: center;
+  color: black;
+}
+.grid-size {
+  margin-bottom: 1rem;
 }
 .form {
   display: flex;
@@ -34,16 +46,19 @@
   align-items: center;
 }
 .user-submit {
-  background-color: antiquewhite;
-  padding: 5px 8px;
+  background-color: rgb(18, 105, 82);
+  padding: 15px 17px;
   font-weight: bold;
+  font-size: 1rem;
   border: 2px solid black;
   border-radius: 3px;
+  margin-bottom: 1rem;
 }
 .reset {
-  background-color: antiquewhite;
-  padding: 5px 8px;
+  background-color: rgb(18, 105, 82);
+  padding: 15px 17px;
   font-weight: bold;
+  font-size: 1rem;
   border: 2px solid black;
   border-radius: 3px;
 }
@@ -55,11 +70,11 @@
 }
 
 .container {
-  height: 600px;
-  width: 600px;
+  height: 700px;
+  width: 700px;
   display: flex;
   flex-direction: column;
-  border: 2px solid rgb(227, 50, 50);
+
   background-color: aliceblue;
 }
 
@@ -68,7 +83,26 @@
   flex: 1;
 }
 .column {
-  border: 0.1px solid black;
-  /* border: 1px solid #2dbc1a; */
   flex: 1;
+}
+
+label {
+  margin-right: 0.8rem;
+  font-size: 1.2rem;
+}
+
+.warning {
+  color: red;
+  background-color: aliceblue;
+}
+.footer * {
+  color: black;
+}
+.footer img {
+  width: 3rem;
+  height: 3rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
