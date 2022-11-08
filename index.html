@@ -9,19 +9,21 @@
   </head>
 
   <body>
-    <div id="header">
+    <div class="etch-container">
       <h1>Etch-a-Sketch</h1>
 
       <div class="form">
-        <p class="grid-size"></p>
-        <input type="text" class="user-number" />
+        <div>
+          <p class="grid-size"></p>
+          <input type="text" class="user-number" />
+          <button class="user-submit">Submit</button>
+        </div>
         <p>PLease enter a number between 2 and 99</p>
-        <button class="user-submit">Submit</button>
       </div>
       <p class="warning"></p>
 
       <div class="buttons">
-        <button class="reset">Reset</button>
+        <button id="reset" class="reset">Reset</button>
       </div>
       <form id="radio-buttons">
         <input type="radio" name="color" id="black" value="black" />

@@ -5,6 +5,13 @@ const warning = document.querySelector(".warning");
 const reset = document.querySelector(".reset");
 const gridSize = document.querySelector(".grid-size");
 const columns = document.getElementsByClassName("column");
+const redBtn = document.querySelector("#red");
+const blackBtn = document.querySelector("#black");
+const greenBtn = document.querySelector("#green");
+const erasebtn = document.querySelector("#erase");
+const rainbowBtn = document.querySelector("#rainbow");
+const colorPicker = document.querySelector("#color-picker");
+const resetBtn = document.querySelector("#reset");
 
 userSubmit.addEventListener("click", createGrid);
 
@@ -26,8 +33,10 @@ function createGrid() {
   let number = userValue.value;
   console.log(number);
   if (number < 0 || number > 99 || isNaN(number)) {
-    alert("Pleae enter a valid number");
+    // alert("Pleae enter a valid number");
+    warning.textContent = "Pleae enter a valid number";
   } else {
+    warning.textContent = "";
     gridSize.textContent = "";
     userValue.value = "";
     // to clear the previous grid before adding new one
@@ -46,23 +55,15 @@ function createGrid() {
           row.appendChild(column);
         }
       }
+      draw();
     }
   }
 }
 function draw() {
   for (let i = 0; i < columns.length; i++) {
     columns[i].addEventListener("mouseover", changeColor);
-    // columns[i].addEventListener("mouseover", changeColor);
   }
 }
-
-const redBtn = document.getElementById("red");
-const blackBtn = document.getElementById("black");
-const greenBtn = document.getElementById("green");
-const erasebtn = document.getElementById("erase");
-const rainbowBtn = document.getElementById("rainbow");
-const resetBtn = document.getElementsByClassName("reset")[0];
-const colorPicker = document.getElementById("color-picker");
 
 // to have the rainbow btn selected by default
 rainbowBtn.checked = true;
